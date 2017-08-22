@@ -4,10 +4,6 @@
 .custom-brand {
 	padding: 5px;
 	height: 40px;
-	/* display: inline-block; */
-}
-.custom-brand p {
-	display: inline;
 }
 .custom-brand img {
 	height: inherit;
