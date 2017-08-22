@@ -27,10 +27,17 @@ let recepty = [
                 "Dochut solou, korenim", "Podava sa so struhanym syrom"]}
 ]
 $(document).ready(function(){
-    let list = $('.food-list');
-    // recepty.forEach(function(recept) {
-    //     console.log(recept.name);
-    //     list.append('<li><a class="food-list-item">' + recept.name + recept.time + '<img src="' + recept.image +
-    //     '" alt="nahlad ' + recept.name + '"/></a></li>');
-    // }, this);
+    let list = $('.food-items');
+    recepty.forEach(function(recept) {
+        list.append(`<div class="col-md-6 col-md-offset-3 food-item">
+			<ul class="list-inline food-list">
+            <li class="list-inline-item">
+                <p class="food-list-name">${recept.name}</p>
+                <p class="food-list-time">Čas prípravy: ${recept.time}</p>
+            </li>
+            <li class="list-inline-item">
+                <img src="${recept.image}" class="food-list-img"/>
+            </li>			
+            </ul></div>`);
+    }, this);
 });
