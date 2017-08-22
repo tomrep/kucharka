@@ -1,0 +1,15 @@
+.custom-navbar {
+	background-color: rgb(252,24,70);
+}
+.navbar-listitem {
+	color: rgb(255,255,176);
+}
+.navbar-listitem:hover {
+	background-color: pink !important;
+	color: darkred;
+}
+.navbar-cta {
+	background-color: pink; 
+	border-color: darkred;
+	font-weight: bolder;
+}
