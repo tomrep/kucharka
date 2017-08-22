@@ -1,6 +1,17 @@
 .custom-navbar {
 	background-color: rgb(252,24,70);
 }
+.custom-brand {
+	padding: 5px;
+	height: 40px;
+	/* display: inline-block; */
+}
+.custom-brand p {
+	display: inline;
+}
+.custom-brand img {
+	height: inherit;
+}
 .navbar-listitem {
 	color: rgb(255,255,176);
 }
