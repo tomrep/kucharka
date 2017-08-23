@@ -21,17 +21,17 @@
 				</a>		
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#" class="navbar-listitem" onclick="filter()">Polievky</a></li>
+				<li><a href="#" class="navbar-listitem" onclick="filter('polievka')">Polievky</a></li>
 				<li class="dropdown">
 					<a class="dropdown-toggle navbar-listitem" data-toggle="dropdown" href="#">Hlavné jedlá
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu food-dropdown">
-						<li><a href="#">Všetky</a></li>
+						<li><a href="#" onclick="filter('hlavne')">Všetky</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#">Kuracie</a></li>
-						<li><a href="#">Bravčové</a></li>
-						<li><a href="#">Hovädzie a divina</a></li>
+						<li><a href="#" onclick="filter('hlavne','kur')">Kuracie</a></li>
+						<li><a href="#" onclick="filter('hlavne','brav')">Bravčové</a></li>
+						<li><a href="#" onclick="filter('hlavne','hov')">Hovädzie a divina</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -39,23 +39,23 @@
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu food-dropdown">
-						<li><a href="#">Všetky</a></li>
+						<li><a href="#" onclick="filter('sladke')">Všetky</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#">Torty</a></li>
-						<li><a href="#">Koláče</a></li>
-						<li><a href="#">Kusové</a></li>
+						<li><a href="#" onclick="filter('sladke','torta')">Torty</a></li>
+						<li><a href="#" onclick="filter('sladke','kolac')">Koláče</a></li>
+						<li><a href="#" onclick="filter('sladke','kusove')">Kusové</a></li>
 					</ul>
 				</li>
-				<li><a href="slane.html" class="navbar-listitem">Slané</a></li>
+				<li><a href="#" class="navbar-listitem" onclick="filter('slane')">Slané</a></li>
 				<li class="dropdown">
 					<a class="dropdown-toggle navbar-listitem" data-toggle="dropdown" href="#">Špeciálne príležitosti
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu food-dropdown">
-						<li><a href="#">Všetky</a></li>
+						<li><a href="#" onclick="filter('speci')">Všetky</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#">Vianoce</a></li>
-						<li><a href="#">Veľká noc</a></li>
+						<li><a href="#" onclick="filter('speci','noc')">Veľká noc</a></li>
+						<li><a href="#" onclick="filter('speci','vianoce')">Vianoce</a></li>
 					</ul>
 				</li>
 			</ul>
