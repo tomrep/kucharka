@@ -34,7 +34,7 @@ let recepty = [
 $(document).ready(function(){
     let list = $('.food-items');
     recepty.forEach(function(recept) {
-        list.append(`<section class="food-card">
+        list.append(`<section class="food-card" id="${recept.id}">
 		<div class="panel-body">
 		  <div class="photo">
 			<img src="data/${recept.image}" alt="${recept.name}">
@@ -54,6 +54,11 @@ $(document).ready(function(){
 		</div>
 	  </section>`);
     }, this);
+    // $('.food-button').on('click', () => {
+    //     let id = this;
+    //     console.log(id);
+    //     show_food(id)
+    // }, this);
 });
 
 function filter (category, subcategory){
@@ -106,6 +111,7 @@ function filter (category, subcategory){
             }
             break;
     }
+    // createState(0, heading, category, subcategory);
     list.html(`<h1>${heading}</h1>`);
     recepty.forEach(function(recept) {
         if(recept.category === category){
@@ -132,4 +138,16 @@ function filter (category, subcategory){
             }            
         }
     });
+}
+function show_food(id){
+    let r = recepty.find( x => x.id === id);
+
+}
+
+function createState(id, title, cat, subcat){
+    let state = {};
+    subcat = subcat || "";
+    let path = "/" + cat + "/" + subcat;
+    console.log(path);
+    history.pushState(state, title, path);
 }
