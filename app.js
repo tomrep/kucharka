@@ -29,15 +29,24 @@ let recepty = [
 $(document).ready(function(){
     let list = $('.food-items');
     recepty.forEach(function(recept) {
-        list.append(`<div class="col-md-6 col-md-offset-3 food-item">
-			<ul class="list-inline food-list">
-            <li class="list-inline-item">
-                <p class="food-list-name">${recept.name}</p>
-                <p class="food-list-time">Čas prípravy: ${recept.time}</p>
-            </li>
-            <li class="list-inline-item">
-                <img src="${recept.image}" class="food-list-img"/>
-            </li>			
-            </ul></div>`);
+        list.append(`<section class="card">
+		<div class="panel-body">
+		  <div class="photo">
+			<img src="${recept.image}" alt="${recept.name}">
+		  </div>
+		  <table class="race-info">
+			<tbody><tr>
+			  <td>
+				<h3><a href="/WatchUsBuild-Angular2Final/races/1">${recept.name}</a></h3>
+				<p class="date">Čas prípravy: ${recept.time}</p>
+				<p class="description">Race through the ruins of an ancient Florida battle arena.</p>
+			  </td>
+			  <td>
+				<button class="button">Pozri recept</button>
+			  </td>
+			</tr>
+		  </tbody></table>
+		</div>
+	  </section>`);
     }, this);
 });
