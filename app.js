@@ -24,7 +24,7 @@ let recepty = [
             "description": "Rezne, ktoré zmiznú skôr ako stihnete povedať bôčik.",
             "ingredients":["Masko", "Struhanka", "Olej"],
             "instructions":["Masko pomliet a obalit v struhanke", "Oprazit na panvici alebo vo fritaku"]},
-        {"id": 5, "name": "Zemiaková polievka", "category": "hlavne", "subcategory": "-",
+        {"id": 5, "name": "Zemiaková polievka", "category": "polievka", "subcategory": "-",
             "time": "-","image": "data/0001.jpg",
             "description": "Lahodná polievka plná chuti a zemiakov.",
             "ingredients":["Zemiaky", "olej", "múka"],
