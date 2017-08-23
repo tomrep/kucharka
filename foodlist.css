@@ -1,7 +1,9 @@
 /* Food list styles */
 
 .food-items {
-	max-width: 800px;
+	max-width: 800px;	
+}
+.food-items h1 {
 	text-align: center;
 }
 .food-items h1 {
