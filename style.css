@@ -1,8 +1,8 @@
 body {
-	background: repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
-	background: -o-repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
-	background: -webkit-repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
-	background: -moz-repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
+	background: radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
+	background: -o-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
+	background: -webkit-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
+	background: -moz-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
 }
 /* navigation bar styles*/
 
@@ -43,6 +43,13 @@ body {
 
 .food-items {
 	max-width: 800px;
+	text-align: center;
+}
+.food-items h1 {
+	color: #5B0000;
+	font-family: Amita;
+	background: lightblue;
+	background: linear-gradient(to right, rgba(255,0,0,0), rgb(172, 239, 253),rgba(255,0,0,0));
 }
 .food-card {
 	background: #FFB6E1;
