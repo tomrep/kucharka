@@ -1,23 +1,60 @@
-@keyframes shake {
+@-webkit-keyframes shake {
     0%, 100% {
-        transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
     }
     10%, 50%, 90% {
-        transform: 
+        -webkit-transform: 
+            scale3d(.9, .9, .9)
+            rotate3d(0, 0, 1, 5deg);
+                transform: 
             scale3d(.9, .9, .9)
             rotate3d(0, 0, 1, 5deg);
     }
     20%, 40%, 60%, 80% {
-        transform: scale3d(.9, .9, .9)
+        -webkit-transform: scale3d(.9, .9, .9);
+                transform: scale3d(.9, .9, .9)
     }
     30%, 70% {
-        transform: 
+        -webkit-transform: 
+            scale3d(.9, .9, .9)
+            rotate3d(0, 0, 1, -5deg);
+                transform: 
+            scale3d(.9, .9, .9)
+            rotate3d(0, 0, 1, -5deg);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+    10%, 50%, 90% {
+        -webkit-transform: 
+            scale3d(.9, .9, .9)
+            rotate3d(0, 0, 1, 5deg);
+                transform: 
+            scale3d(.9, .9, .9)
+            rotate3d(0, 0, 1, 5deg);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: scale3d(.9, .9, .9);
+                transform: scale3d(.9, .9, .9)
+    }
+    30%, 70% {
+        -webkit-transform: 
+            scale3d(.9, .9, .9)
+            rotate3d(0, 0, 1, -5deg);
+                transform: 
             scale3d(.9, .9, .9)
             rotate3d(0, 0, 1, -5deg);
     }
 }
 
 .custom-brand:hover {
-    animation: shake 0.6s;
-    transform-origin: center;
+    -webkit-animation: shake 0.6s;
+            animation: shake 0.6s;
+    -webkit-transform-origin: center;
+            transform-origin: center;
 }
