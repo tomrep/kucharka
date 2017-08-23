@@ -1,7 +1,7 @@
 /* navigation bar styles*/
 
 .custom-navbar {
-	background-color: #EF133F;
+	background-color: #E24BC0;
 }
 .custom-brand {
 	padding: 5px;
@@ -11,11 +11,12 @@
 	height: inherit;
 }
 .navbar-listitem {
-	color: #F9F9A4;
+	color: #FFF9EB;
+	font-weight: bolder;
 }
 .navbar-listitem:hover {
-	background-color: #FFC0CB !important;
-	color: #8B0000;
+	background-color: #ED82E1 !important;
+	color: rgb(109, 2, 4);
 }
 .navbar-cta {
 	background-color: #FFC0CB; 
@@ -24,89 +25,66 @@
 }
 /* Food list styles */
 
-.food-list {	
-	list-style: none;	
-	border: 2px solid #660000;
+.food-items {
+	max-width: 800px;
 }
-.food-list{
-	background-color: #CD6C8B;
-}
-.food-list-name {
-	font-size: 28px;
-	line-height: 50px;
-}
-.food-list-img {
-	vertical-align: bottom;
-	width: 150px;
-}
-
-/* This section is for new card style */
-.card {
-	background: #44464c;
+.food-card {
+	background: #FFB6E1;
 	margin-bottom: 30px;
 	min-height: 160px;
-  }
-  .button {
-	background: #fd79fc;
+	border: 2px solid #660000;
+}
+.food-button {
+	background: #BD16BB;
 	border-radius: 3px;
 	border: 0;
 	color: #ffffff;
 	width: 120px;
-  }
+	height: 40px;
+}  
+.time {
+	color: #C5274F;
+	font-weight: bold;
+}  
+.description {
+	color: #FFD938;
+	font-weight: bold;
+}
   
-.date, .price {
-	color: #9397d8;
-  }
-  
-  .description {
-	color: #66d9f7;
-  }
-  
-  .panel-body {
+.panel-body {
 	display: table;
 	padding: 0;
-  }
-  
-  .photo {
+}  
+.photo {
 	float: left;
 	margin-right: 30px;
 	max-width: 200px;
 	overflow-x: hidden;
-	
-  }
-  
-  .price {
-	margin: 0;
-	font-size: 18px;
-	text-align: center;
-	width: 120px;
-  }
-  
-  .race-info {
+} 
+.food-info {
 	display: table-cell;
 	vertical-align: middle;
   }
   
-  .race-info h3 {
-	margin: 0 0;
-  }
+.food-info h3 {
+	margin: 10px 0;
+	font-weight: bolder;
+}
   
-  .race-info h3 a {
-	color: white;
-  }
+.food-info h3 a {
+	color: #EF0EBA;
+}
   
-  .race-info td:last-child {
+.food-info td:last-child {
 	padding: 0 20px;
 	text-align: center;
-  }
+}
   
-  .race-info, .race-info tbody, .race-info tr, .race-info td {
+.food-info, .food-info tbody, .food-info tr, .food-info td {
 	width: 100%;
-  }
+}
   
-  .race-info tbody {
+.food-info tbody {
 	display: inline-block;
-  }
-  .food-items {
-	max-width: 800px;
-  }
+}
+ 
