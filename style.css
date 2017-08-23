@@ -36,12 +36,20 @@
 }
 .food-button {
 	background: #BD16BB;
-	border-radius: 3px;
+	border-radius: 7px;
 	border: 0;
 	color: #ffffff;
-	width: 120px;
-	height: 40px;
-}  
+	width: 140px;
+	height: 50px;
+	display: inline-block;
+	padding-top: 10%;
+	cursor: pointer;
+} 
+.food-button:hover {
+	background: #D25DD0;
+	color: #FFFCE7;
+	text-decoration: unset;
+}
 .time {
 	color: #C5274F;
 	font-weight: bold;

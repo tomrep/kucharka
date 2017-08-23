@@ -47,7 +47,7 @@ $(document).ready(function(){
 				<p class="description">${recept.description}</p>
 			  </td>
 			  <td>
-				<button class="food-button">Pozri recept</button>
+				<a class="food-button">Pozri recept</a>
 			  </td>
 			</tr>
 		  </tbody></table>
