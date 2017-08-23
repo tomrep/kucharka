@@ -19,11 +19,42 @@
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="polievky.html" class="navbar-listitem">Polievky</a></li>
-				<li><a href="jedla.html" class="navbar-listitem">Hlavné jedlá</a></li>
-				<li><a href="zakusky.html" class="navbar-listitem">Zákusky</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle navbar-listitem" data-toggle="dropdown" href="#">Hlavné jedlá
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu food-dropdown">
+						<li><a href="#">Všetky</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Kuracie</a></li>
+						<li><a href="#">Bravčové</a></li>
+						<li><a href="#">Hovädzie a divina</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle navbar-listitem" data-toggle="dropdown" href="#">Zákusky
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu food-dropdown">
+						<li><a href="#">Všetky</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Torty</a></li>
+						<li><a href="#">Koláče</a></li>
+						<li><a href="#">Kusové</a></li>
+					</ul>
+				</li>
 				<li><a href="slane.html" class="navbar-listitem">Slané</a></li>
-                <li><a href="speci.html" class="navbar-listitem">Špeciálne príležitosti</a></li>
-                <!-- <li><a href="pridaj.html" class="btn btn-warning navbar-cta"><span class="glyphicon glyphicon-plus"></span> Nový recept</a></li> -->
+				<li class="dropdown">
+					<a class="dropdown-toggle navbar-listitem" data-toggle="dropdown" href="#">Špeciálne príležitosti
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu food-dropdown">
+						<li><a href="#">Všetky</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Vianoce</a></li>
+						<li><a href="#">Veľká noc</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</nav>

@@ -1,3 +1,6 @@
+.body {
+	background: linear-gradient(45deg, blue, red);
+}
 /* navigation bar styles*/
 
 .custom-navbar {
@@ -14,7 +17,7 @@
 	color: #FFF9EB;
 	font-weight: bolder;
 }
-.navbar-listitem:hover {
+.navbar-listitem:hover, .navbar-listitem:focus {
 	background-color: #ED82E1 !important;
 	color: rgb(109, 2, 4);
 }
@@ -22,6 +25,16 @@
 	background-color: #FFC0CB; 
 	border-color: #8B0000;
 	font-weight: bolder;
+}
+.food-dropdown {
+	width: 100%;
+	min-width: 0;
+}
+.food-dropdown > li > {
+	width: 100%;
+}
+.food-dropdown > li > a {
+	white-space: pre-line;
 }
 /* Food list styles */
 
