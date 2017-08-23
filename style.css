@@ -1,5 +1,8 @@
-.body {
-	background: linear-gradient(45deg, blue, red);
+body {
+	background: repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
+	background: -o-repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
+	background: -webkit-repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
+	background: -moz-repeating-radial-gradient(#E24BC0, #FFB9F9, #FF9B9B);
 }
 /* navigation bar styles*/
 
