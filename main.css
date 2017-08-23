@@ -1,8 +1,12 @@
+html, body {
+	/* height: 100%; */
+} 
 body {
-	background: radial-gradient(#E24BC0, #FF9B9B, #FFB9F9);
-	background: -o-radial-gradient(#E24BC0, #FF9B9B, #FFB9F9);
-	background: -webkit-radial-gradient(#E24BC0, #FF9B9B, #FFB9F9);
-	background: -moz-radial-gradient(#E24BC0, #FF9B9B, #FFB9F9);
+	background: linear-gradient(to right,#ECDEAA, #D89E6F, #EC8A61, #D89E6F, #ECDEAA);
+	background: -o-linear-gradient(to right,#FFB9F9, #E24BC0, #FFB9F9);
+	background: -webkit-linear-gradient(to right,#FFB9F9, #E24BC0, #FFB9F9);
+	background: -moz-linear-gradient(to right,#FFB9F9, #E24BC0, #FFB9F9);
+	background-position: center;
 }
 /* navigation bar styles*/
 
@@ -38,4 +42,16 @@ body {
 }
 .food-dropdown > li > a {
 	white-space: pre-line;
+}
+
+/* Footer styles */
+
+.footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: #efefef;
+	text-align: center;
 }
