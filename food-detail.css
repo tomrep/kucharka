@@ -1,11 +1,11 @@
 .food-detail {
-	position: absolute;
+	position: fixed;
     width: 100%;
     max-width: 650px;
     z-index: 10;
 	background: #F5F8D0;
 	border: #F8BA27 solid 2px;
-	margin-left: 5%;
+	margin-left: 3%;
 	visibility: hidden;
 }
 .food-name {

@@ -54,7 +54,8 @@ $(document).ready(function(){
 		</div>
         </section>`);
       
-        $(`#${recept.id}`).on('click', () => {
+        $(`#${recept.id}`).on('click', (event) => {
+            event.preventDefault();
             load_food(recept.id);
         });
     }, this);
@@ -180,25 +181,27 @@ function load_food(id){
             </div>
         </td></tr></tbody>
         </table>`);
-    
-    $('.exit-button').on('click', 'a', () => {
-        hide_food(div);
-    });
-    div.removeClass("food-hidden");
-    div.toggleClass("food-visible");
-    $('.food-card').toggleClass("blur-back");
+    show_food(div);
 }
 
+function show_food(food) {
+    $('.exit-button').on('click', 'a', (event) => {
+        event.preventDefault();
+        hide_food(food);
+    });
+    $('.food-button').off('click');
+    food.removeClass("food-hidden");
+    food.toggleClass("food-visible");
+    $('.food-card').toggleClass("blur-back");
+}
 function hide_food(div) {
     div.addClass("food-hidden");
     div.toggleClass("food-visible");
     $('.food-card').toggleClass("blur-back");
+    recepty.forEach((recept) => {
+        $(`#${recept.id}`).on('click', (event) => {
+            event.preventDefault();
+            load_food(recept.id);
+        });
+    });
 }
-// function createState(id, title, cat, subcat){
-//     let state = {};
-//     subcat = subcat || "";
-//     let path = "/" + cat + "/" + subcat;
-//     console.log(path);
-//     history.pushState(state, title, path);
-
-// }
