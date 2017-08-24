@@ -34,7 +34,7 @@ let recepty = [
 $(document).ready(function(){
     let list = $('.food-items');
     recepty.forEach(function(recept) {
-        list.append(`<section class="food-card" id="${recept.id}">
+        list.append(`<section class="food-card">
 		<div class="panel-body">
 		  <div class="photo">
 			<img src="data/${recept.image}" alt="${recept.name}">
@@ -47,17 +47,22 @@ $(document).ready(function(){
 				<p class="description">${recept.description}</p>
 			  </td>
 			  <td>
-				<a class="food-button">Pozri recept</a>
+				<a class="food-button" id="${recept.id}">Pozri recept</a>
 			  </td>
 			</tr>
 		  </tbody></table>
 		</div>
-	  </section>`);
+      </section>`);
+      
+        $(`#${recept.id}`).on('click', () => {
+            load_food(recept.id);
+        });
+
     }, this);
     // $('.food-button').on('click', () => {
     //     let id = this;
     //     console.log(id);
-    //     show_food(id)
+    //     
     // }, this);
 });
 
@@ -111,7 +116,6 @@ function filter (category, subcategory){
             }
             break;
     }
-    // createState(0, heading, category, subcategory);
     list.html(`<h1>${heading}</h1>`);
     recepty.forEach(function(recept) {
         if(recept.category === category){
@@ -139,15 +143,63 @@ function filter (category, subcategory){
         }
     });
 }
-function show_food(id){
+function load_food(id){
     let r = recepty.find( x => x.id === id);
-
+    let div = $('.food-detail');
+    let inst = "";
+    let ingr = "";
+    let i;
+    for(i  = 0; i < r.ingredients.length; i++){
+        ingr += `<li>${r.ingredients[i]}</li>`;
+    }
+    for(i  = 0; i < r.instructions.length; i++){
+        inst += `<li>${r.instructions[i]}</li>`;
+    }
+    div.html("");
+    div.append(`
+        <div class="exit-button">
+            <a href="#">X</a>
+        </div>
+        <div class="food-name">
+            <h2>${r.name}</h2>
+        </div>       
+        <div class="detail-photo">
+            <img src="data/${r.image}" alt="${r.name}"/>
+        </div>
+        <p class="detail-description">${r.description}</p>
+        <div class="detail-info">
+            <p class="detail-time">Náročnosť: ${r.time}</p>
+            <p class="detail-time">Čas prípravy: ${r.time}</p>
+        </div>
+        <table class="food-table">
+        <tbody>
+        <tr><td>
+            <div class="food-ingr">
+                <p>Ingrediencie</p>
+                <ul>${ingr}</ul>
+            </div>
+        </td>
+        <td>
+            <div class="food-inst">
+                <p>Postup</p>
+                <ol>${inst}</ol>
+            </div>
+        </td></tr></tbody>
+        </table>.`);
+    $('.exit-button').on('click', 'a', () => {
+        hide_food(div);
+    });
+    div.className += " food-visible";
 }
 
-function createState(id, title, cat, subcat){
-    let state = {};
-    subcat = subcat || "";
-    let path = "/" + cat + "/" + subcat;
-    console.log(path);
-    history.pushState(state, title, path);
+function hide_food(div) {
+    div.className = "jumborton food-detail";
 }
+// function createState(id, title, cat, subcat){
+//     let state = {};
+//     subcat = subcat || "";
+//     let path = "/" + cat + "/" + subcat;
+//     console.log(path);
+//     history.pushState(state, title, path);
+
+// }
