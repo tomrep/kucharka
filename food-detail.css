@@ -1,10 +1,12 @@
 .food-detail {
-	display: none;
-	width: 80%;
-	position: relative;
-	margin: 0 auto;
+	position: absolute;
+    width: 100%;
+    max-width: 650px;
+    z-index: 10;
 	background: #F5F8D0;
 	border: #F8BA27 solid 2px;
+	margin-left: 5%;
+	visibility: hidden;
 }
 .food-name {
 	text-align: center;
@@ -51,7 +53,6 @@
 	padding: 10px 0;
 	color: #0E1C6A;
 	font-weight: bold;
-	text-align: center;
 }
 .detail-info {
 	margin-top: 20px;
@@ -68,6 +69,9 @@
 }
 .food-table, .food-table tbody,.food-table tr{
 	width: 100%;
+}
+.food-table tbody {
+	vertical-align: top;
 }
 .food-table td {
 	width: 50%;

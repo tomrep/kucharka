@@ -62,15 +62,41 @@
     from {
         transform: translate3d(0, 100%, 0);
         visibility: hidden;
+        opacity: 0;
       }
     
       to {
         transform: translate3d(0, 0, 0);
         visibility: visible;
+        opacity: 1;
       }
 }
 
-.food-visible {
-    display: block;
+.food-visible {   
     animation: slideUp 0.5s;
+    visibility: visible;
+}
+.blur-back {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+        opacity: 1;
+      }
+    
+      to {
+        transform: translate3d(0, 100%, 0);
+        visibility: hidden;
+        opacity: 0;
+      }
+}
+.food-hidden {
+    animation: slideDown 0.5s;
 }

@@ -184,12 +184,15 @@ function load_food(id){
     $('.exit-button').on('click', 'a', () => {
         hide_food(div);
     });
-
+    div.removeClass("food-hidden");
     div.toggleClass("food-visible");
+    $('.food-card').toggleClass("blur-back");
 }
 
 function hide_food(div) {
+    div.addClass("food-hidden");
     div.toggleClass("food-visible");
+    $('.food-card').toggleClass("blur-back");
 }
 // function createState(id, title, cat, subcat){
 //     let state = {};
