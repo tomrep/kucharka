@@ -53,7 +53,6 @@ $(document).ready(() => {
 		  </tbody></table>
 		</div>
         </section>`);
-      
         $(`#${recept.id}`).on('click', (event) => {
             event.preventDefault();
             load_food(recept.id);
@@ -111,32 +110,39 @@ function filter (category, subcategory){
             }
             break;
     }
-    list.html(`<h1>${heading}</h1>`);
+    list.html(`
+        <h1>${heading}</h1>
+        <div class="jumbotron food-detail"></div>
+    `);
     recepty.forEach((recept) => {
         if(recept.category === category){
             if(!subcategory || recept.subcategory === subcategory){
-                list.append(`<section class="food-card">
-                <div class="panel-body">
-                  <div class="photo">
-                    <img src="data/${recept.image}" alt="${recept.name}">
-                  </div>
-                  <table class="food-info">
-                    <tbody><tr>
-                      <td>
+                list.append(`
+                <section class="food-card">
+                    <div class="panel-body">
+                        <div class="photo">
+                        <img src="data/${recept.image}" alt="${recept.name}">
+                        </div>
+                        <table class="food-info">
+                        <tbody><tr>
+                        <td>
                         <h3><a href="#">${recept.name}</a></h3>
                         <p class="time">Čas prípravy: ${recept.time}</p>
                         <p class="description">${recept.description}</p>
-                      </td>
-                      <td>
-                        <a class="food-button">Pozri recept</a>
-                      </td>
-                    </tr>
-                  </tbody></table>
-                </div>
-              </section>`);
+                        </td>
+                        <td>
+                        <a class="food-button" id="${recept.id}">Pozri recept</a>
+                        </td></tr>
+                        </tbody></table>
+                    </div>
+                </section>`);
+                $(`#${recept.id}`).on('click', (event) => {
+                    event.preventDefault();
+                    load_food(recept.id);
+                });
             }            
         }
-    });
+    }, this);
 }
 function load_food(id){
     let r = recepty.find( x => x.id === id);
@@ -185,23 +191,25 @@ function load_food(id){
 }
 
 function show_food(food) {
+    $('.food-button').off('click');
     $('.exit-button').on('click', 'a', (event) => {
         event.preventDefault();
         hide_food(food);
     });
-    $('.food-button').off('click');
     food.removeClass("food-hidden");
     food.toggleClass("food-visible");
     $('.food-card').toggleClass("blur-back");
 }
+
 function hide_food(div) {
     div.addClass("food-hidden");
     div.toggleClass("food-visible");
     $('.food-card').toggleClass("blur-back");
-    recepty.forEach((recept) => {
+    recepty.forEach( (recept) => {
         $(`#${recept.id}`).on('click', (event) => {
             event.preventDefault();
             load_food(recept.id);
         });
-    });
+    }, this);
+    $('.exit-button').off('click');
 }
