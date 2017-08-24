@@ -52,18 +52,12 @@ $(document).ready(function(){
 			</tr>
 		  </tbody></table>
 		</div>
-      </section>`);
+        </section>`);
       
         $(`#${recept.id}`).on('click', () => {
             load_food(recept.id);
         });
-
     }, this);
-    // $('.food-button').on('click', () => {
-    //     let id = this;
-    //     console.log(id);
-    //     
-    // }, this);
 });
 
 function filter (category, subcategory){
@@ -155,7 +149,7 @@ function load_food(id){
     for(i  = 0; i < r.instructions.length; i++){
         inst += `<li>${r.instructions[i]}</li>`;
     }
-    div.html("");
+    div.empty();
     div.append(`
         <div class="exit-button">
             <a href="#">X</a>
@@ -185,15 +179,17 @@ function load_food(id){
                 <ol>${inst}</ol>
             </div>
         </td></tr></tbody>
-        </table>.`);
+        </table>`);
+    
     $('.exit-button').on('click', 'a', () => {
         hide_food(div);
     });
-    div.className += " food-visible";
+
+    div.toggleClass("food-visible");
 }
 
 function hide_food(div) {
-    div.className = "jumborton food-detail";
+    div.toggleClass("food-visible");
 }
 // function createState(id, title, cat, subcat){
 //     let state = {};

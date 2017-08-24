@@ -58,3 +58,19 @@
     -webkit-transform-origin: center;
             transform-origin: center;
 }
+@keyframes slideUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+        visibility: hidden;
+      }
+    
+      to {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+}
+
+.food-visible {
+    display: block;
+    animation: slideUp 0.5s;
+}
