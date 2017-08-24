@@ -43,7 +43,11 @@ $(document).ready(() => {
 			<tbody><tr>
 			  <td>
 				<h3><a href="#">${recept.name}</a></h3>
-				<p class="time">Čas prípravy: ${recept.time}</p>
+                <p class="time">
+                    Čas prípravy: ${recept.time}
+                    &emsp;
+                    Náročnosť: ${recept.time}
+                </p>
 				<p class="description">${recept.description}</p>
 			  </td>
 			  <td>
