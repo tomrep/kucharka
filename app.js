@@ -31,9 +31,9 @@ let recepty = [
             "instructions":["Uvar zemiaky","Urob zaprazku","Zalej vodou","Pridaj zemiaky",
                 "Dochut solou, korenim", "Podava sa so struhanym syrom"]}
 ]
-$(document).ready(function(){
+$(document).ready(() => {
     let list = $('.food-items');
-    recepty.forEach(function(recept) {
+    recepty.forEach((recept) => {
         list.append(`<section class="food-card">
 		<div class="panel-body">
 		  <div class="photo">
@@ -112,7 +112,7 @@ function filter (category, subcategory){
             break;
     }
     list.html(`<h1>${heading}</h1>`);
-    recepty.forEach(function(recept) {
+    recepty.forEach((recept) => {
         if(recept.category === category){
             if(!subcategory || recept.subcategory === subcategory){
                 list.append(`<section class="food-card">
