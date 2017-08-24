@@ -1,6 +1,3 @@
-html, body {
-	/* height: 100%; */
-} 
 body {
 	background: linear-gradient(to right,#ECDEAA, #D89E6F, #EC8A61, #D89E6F, #ECDEAA);
 	background: -o-linear-gradient(to right,#FFB9F9, #E24BC0, #FFB9F9);
@@ -8,6 +5,7 @@ body {
 	background: -moz-linear-gradient(to right,#FFB9F9, #E24BC0, #FFB9F9);
 	background-position: center;
 }
+
 /* navigation bar styles*/
 
 .custom-navbar {
