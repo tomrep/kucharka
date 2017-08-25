@@ -1,5 +1,5 @@
 .food-detail {
-	position: fixed;
+	position: absolute;
     width: 100%;
     max-width: 650px;
     z-index: 10;

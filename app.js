@@ -59,6 +59,7 @@ $(document).ready(() => {
         </section>`);
         $(`#${recept.id}`).on('click', (event) => {
             event.preventDefault();
+            window.scroll(0,0);
             load_food(recept.id);
         });
     }, this);
@@ -141,6 +142,7 @@ function filter (category, subcategory){
                     </div>
                 </section>`);
                 $(`#${recept.id}`).on('click', (event) => {
+                    window.scroll(0,0);
                     event.preventDefault();
                     load_food(recept.id);
                 });
@@ -212,6 +214,7 @@ function hide_food(div) {
     recepty.forEach( (recept) => {
         $(`#${recept.id}`).on('click', (event) => {
             event.preventDefault();
+            window.scroll(0,0);
             load_food(recept.id);
         });
     }, this);
